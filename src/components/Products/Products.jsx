@@ -49,7 +49,7 @@ const ProductsData = [
 ];
 const Products = () => {
   return (
-    <div className="mt-14 mb-12">
+    <div className="mt-32 mb-12">
       <div className="container mx-auto">
         <div className="text-center mb-10 max-w-[600px] mx-auto">
           <p data-aos="fade-up" className="text-sm text-orange-400">
