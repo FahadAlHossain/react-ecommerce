@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Products from "./components/Products/Products";
@@ -9,8 +9,13 @@ import Banner from "./components/Banner/Banner";
 import Subscribe from "./components/Subscribe/Subscribe";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
+import Popup from "./components/Popup/Popup";
 
 const App = () => {
+  const [orderPop, setOrderPop] =useState(false)
+  const handlePopUp = () => {
+    setOrderPop(!orderPop)
+  }
   useEffect(() => {
     AOS.init({
       offset: 100,
@@ -22,15 +27,16 @@ const App = () => {
   }, []);
   return (
     <div>
-      <Navbar />
-      <Hero />
+      <Navbar handlePopUp={handlePopUp} />
+      <Hero handlePopUp={handlePopUp}/>
       <Products />
-      <TopProducts/>
+      <TopProducts handlePopUp={handlePopUp}/>
       <Banner/>
       <Subscribe/>
       <Products />
       <Testimonials/>
       <Footer></Footer>
+      <Popup orderPop={orderPop} setOrderPop={setOrderPop}/>
     </div>
   );
 };

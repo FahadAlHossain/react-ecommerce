@@ -27,7 +27,7 @@ const ProductsData = [
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];
-const TopProducts = () => {
+const TopProducts = ({handlePopUp}) => {
   return (
     <div className='mt-32'>
       <div className='container  mx-auto '>
@@ -59,7 +59,7 @@ const TopProducts = () => {
                             </div>
                             <h1 className='text-xl font-bold'>{data.title}</h1>
                             <p className='text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2'>{data.description}</p>
-                            <button className='bg-orange-400 hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-orange-400'>Order Now</button>
+                            <button onClick={handlePopUp} className='bg-orange-400 hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-orange-400'>Order Now</button>
                         </div>
                     </div>
                 ))

@@ -34,6 +34,7 @@ const Testimonials = () => {
     arrows: false,
     infinite: true,
     speed: 500,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -41,14 +42,6 @@ const Testimonials = () => {
     pauseOnHover: true,
     pauseOnFocus: true,
     responsive: [
-      {
-        breakpoint: 10000,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-        },
-      },
       {
         breakpoint: 1024,
         settings: {
